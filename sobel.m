@@ -25,8 +25,8 @@ for i = 2:height - 1
             magy = 0;
             for a = 1:3
                 for b = 1:3
-                    magx = magx + (kernelx(a, b) * image(i + a - 2, j + b - 2));
-                    magy = magy + (kernely(a, b) * image(i + a - 2, j + b - 2));
+                    magx = magx + (kernelx(a, b) * image(i + a - 2, j + b - 2, k));
+                    magy = magy + (kernely(a, b) * image(i + a - 2, j + b - 2, k));
                 end;
             end;     
             edges(i,j,k) = sqrt(magx^2 + magy^2); %#ok<AGROW>
